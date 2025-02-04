@@ -9,6 +9,7 @@ function createWindow() {
     const win = new BrowserWindow({
       width: 1000,
       height: 700,
+      icon: path.join(__dirname, 'assets', 'icon.png'),
       webPreferences: {
         preload: path.join(__dirname, 'preload.js'),
         contextIsolation: true
@@ -18,6 +19,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+    app.setName("SSH Navigator");
     createWindow();
     app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow();

@@ -9,7 +9,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "rebuild": "electron-rebuild -f -w node-pty"
+    "rebuild": "electron-rebuild -f -w node-pty",
+    "package": "electron-packager . SSH-Navigator --platform=darwin --icon=assets/icon.icns",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [
     "ssh",
@@ -18,15 +21,51 @@
     "gui",
     "management"
   ],
-  "author": "Sahil Singh",
+  "author": "Sahil Singh <sahil85.10s@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "electron": "^34.0.2",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2",
     "electron-rebuild": "^3.2.9"
   },
   "dependencies": {
     "commander": "^13.1.0",
     "xterm": "^5.3.0",
     "xterm-addon-fit": "^0.8.0"
+  },
+  "build": {
+    "appId": "com.sahil.sshnavigator",
+    "productName": "SSH Navigator",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/{electron,**/electron}"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "assets/icon.icns"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "zip"
+      ],
+      "icon": "assets/icon.png"
+    }
   }
 }
