@@ -1,0 +1,371 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Share Tech Mono', 'Roboto Mono', monospace;
+    background-color: #0a0a0f;
+    color: #00ff9d;
+    background-image: 
+        linear-gradient(0deg, rgba(10,10,15,0.9) 0%, rgba(10,10,15,0.9) 100%),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(0,255,157,0.1) 3px);
+}
+
+/* Header styles */
+header {
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px 25px;
+    border-bottom: 2px solid #00ff9d;
+    box-shadow: 0 0 20px rgba(0,255,157,0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #00ff9d;
+    text-shadow: 0 0 10px rgba(0,255,157,0.8);
+    letter-spacing: 2px;
+}
+
+.header-buttons button {
+    background-color: transparent;
+    border: 2px solid #00ff9d;
+    color: #00ff9d;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.header-buttons button:hover {
+    background-color: #00ff9d;
+    color: #0a0a0f;
+    box-shadow: 0 0 20px rgba(0,255,157,0.5);
+}
+
+.header-buttons button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    border: 2px solid #00ff9d;
+    background-color: rgba(0,0,0,0.7);
+    color: #00ff9d;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(0,255,157,0.2);
+    transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 25px rgba(0,255,157,0.4);
+    border-color: #00ff9d;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: rgba(0, 255, 157, 0.5);
+}
+
+/* Machine list grid */
+.machine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.machine-item {
+    background: rgba(0,0,0,0.7);
+    border: 2px solid #00ff9d;
+    border-radius: 0;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,255,157,0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.machine-item::before {
+    content: '>';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #00ff9d;
+    opacity: 0.5;
+}
+
+.machine-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0,255,157,0.4);
+}
+
+.machine-details {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.machine-details strong {
+    color: #00ff9d;
+    font-size: 1.3em;
+    text-shadow: 0 0 10px rgba(0,255,157,0.5);
+}
+
+/* Action buttons for each machine */
+.machine-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.machine-actions button {
+    min-width: 100px;
+    background-color: transparent;
+    border: 2px solid #00ff9d;
+    color: #00ff9d;
+    padding: 10px;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.machine-actions button:hover {
+    background-color: #00ff9d;
+    color: #0a0a0f;
+    box-shadow: 0 0 15px rgba(0,255,157,0.5);
+}
+
+/* Form styling for add machine page */
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: rgba(0,0,0,0.7);
+    padding: 25px;
+    border: 2px solid #00ff9d;
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0,255,157,0.3);
+    position: relative;
+}
+
+.form-container::before {
+    content: '[ NEW MACHINE ]';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #0a0a0f;
+    padding: 0 10px;
+    color: #00ff9d;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+}
+
+.form-container input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid #00ff9d;
+    background-color: rgba(0,0,0,0.5);
+    color: #00ff9d;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(0,255,157,0.3);
+}
+
+.form-container input[type="text"]::placeholder {
+    color: rgba(0, 255, 157, 0.5);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 12px;
+    padding-right: 70px;
+    border: 2px solid #00ff9d;
+    background-color: rgba(0,0,0,0.5);
+    color: #00ff9d;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#browse-key {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #00ff9d;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    height: calc(100% - 24px);
+    display: flex;
+    align-items: center;
+}
+
+#browse-key:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 255, 157, 0.8);
+    background: rgba(0, 255, 157, 0.1);
+}
+
+.form-container button {
+    background-color: #ff007f;
+    border: none;
+    color: #0d0d0d;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.form-container button:hover {
+    background-color: #e60073;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: rgba(10, 10, 15, 0.95);
+    border: 2px solid #00ff9d;
+    padding: 25px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+    position: relative;
+    animation: modalAppear 0.3s ease-out;
+}
+
+.modal::before {
+    content: '[ WARNING ]';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #0a0a0f;
+    padding: 0 10px;
+    color: #ff3e3e;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+}
+
+.modal-content {
+    margin-bottom: 20px;
+    color: #00ff9d;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.modal-buttons button {
+    background: transparent;
+    border: 2px solid #00ff9d;
+    color: #00ff9d;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.modal-buttons button.delete-confirm {
+    border-color: #ff3e3e;
+    color: #ff3e3e;
+}
+
+.modal-buttons button:hover {
+    background: #00ff9d;
+    color: #0a0a0f;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+}
+
+.modal-buttons button.delete-confirm:hover {
+    background: #ff3e3e;
+    border-color: #ff3e3e;
+    box-shadow: 0 0 15px rgba(255, 62, 62, 0.5);
+}
+
+@keyframes modalAppear {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+  

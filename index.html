@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSH Navigator - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>SSH Navigator</h1>
+    <div class="header-buttons">
+      <button id="favorites-btn">Favorites</button>
+      <button id="add-machine-btn">Add Machine</button>
+    </div>
+  </header>
+  <main>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search machines...">
+    </div>
+    <div id="machine-list" class="machine-list"></div>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>

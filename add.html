@@ -1,0 +1,34 @@
+<!-- add.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSH Navigator - Add Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Add New Machine</h1>
+    <div class="header-buttons">
+      <button id="back-btn">Back</button>
+    </div>
+  </header>
+  <main>
+    <div class="form-container">
+      <form id="machine-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="tags" placeholder="Tags (comma separated)">
+        <input type="text" id="ip" placeholder="IP Address" required>
+        <input type="text" id="hostname" placeholder="Hostname">
+        <input type="text" id="username" placeholder="Username" required>
+        <div class="input-group">
+          <input type="text" id="key" placeholder="Path to PEM/Key file" required>
+          <button type="button" id="browse-key">Browse</button>
+        </div>
+        <button type="submit">Add Machine</button>
+      </form>
+    </div>
+  </main>
+  <script src="addRenderer.js"></script>
+</body>
+</html>
