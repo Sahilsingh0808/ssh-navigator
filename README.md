@@ -1,11 +1,7 @@
 Below is an example of a detailed `README.md` file for your project. You can copy it into your project’s root directory and adjust any details as needed.
 
-```markdown
 # SSH Navigator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/ssh-navigator)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/ssh-navigator.svg)](https://github.com/yourusername/ssh-navigator/issues)
 
 SSH Navigator is an open-source, cross-platform SSH management tool built with [Electron](https://www.electronjs.org/). Designed for developers and system administrators, SSH Navigator helps you easily manage multiple SSH connections from one user-friendly interface on Linux and macOS.
 
@@ -203,6 +199,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Enjoy using SSH Navigator and happy coding!
-```
 
 This README provides comprehensive details about the project—including features, installation, usage, configuration, troubleshooting, and contributing guidelines—while omitting any mention of an embedded terminal feature.
